@@ -62,8 +62,16 @@ const BoardList: FC<BoardListProps> = ({
         <div className="flex justify-between ml-2">
           <Icon name="remove" className="btn-error btn-xs" onClick={onRemoveList} />
           <div className="flex">
-            <Icon name="📑" className="btn-success btn-xs" onClick={onPrependCard} />
-            <Icon name="📜" className="ml-2 btn-success btn-xs" onClick={onAppendCard} />
+            <Icon
+              name="post_add"
+              className="btn-success btn-xs"
+              onClick={onPrependCard}
+            />
+            <Icon
+              name="playlist_add"
+              className="ml-2 btn-success btn-xs"
+              onClick={onAppendCard}
+            />
           </div>
         </div>
         <CardDroppable droppableId={list.uuid}>{children}</CardDroppable>
